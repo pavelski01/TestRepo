@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-MeterReadingClient-6ecce908-dd19-4ed6-9e4d-90291834e7f8</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.32.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.32.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\meterservice.proto" GrpcServices="Client" AdditionalImportDirs=".." Link="Protos\meterservice.proto" />
+  </ItemGroup>
+</Project>
